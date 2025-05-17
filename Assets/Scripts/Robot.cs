@@ -1,10 +1,10 @@
 using UnityEngine;
 using UnityEngine.AI;
+using StarterAssets;
 
 public class Robot : MonoBehaviour
 {
-    [SerializeField] Transform target;
-
+    FirstPersonController player;
     NavMeshAgent agent;
 
     void Awake()
@@ -15,12 +15,12 @@ public class Robot : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+        player = FindFirstObjectByType<FirstPersonController>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        agent.SetDestination(target.position);
+        agent.SetDestination(player.transform.position);
     }
 }
