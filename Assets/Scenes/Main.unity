@@ -540,6 +540,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c5efc39a8aaf6e64ea40e9ad573e9b47, type: 3}
+--- !u!4 &953032203 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8997996947095583982, guid: c5efc39a8aaf6e64ea40e9ad573e9b47, type: 3}
+  m_PrefabInstance: {fileID: 953032202}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &965480109
 GameObject:
   m_ObjectHideFlags: 0
@@ -799,6 +804,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1094849805}
   - component: {fileID: 1094849804}
+  - component: {fileID: 1094849806}
   m_Layer: 0
   m_Name: Robot
   m_TagString: Untagged
@@ -844,6 +850,19 @@ Transform:
   - {fileID: 1920475643}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1094849806
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1094849803}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea782cce68dbf1449a280b272f2162b8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 953032203}
 --- !u!1001 &1206630658
 PrefabInstance:
   m_ObjectHideFlags: 0
