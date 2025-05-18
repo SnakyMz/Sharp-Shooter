@@ -165,6 +165,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9b1ad06783a47e409b5ae7efe45eaf8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hitVFX: {fileID: 2115105525531280993, guid: bfcf7f7f28ee3ba49b40e1466bad61e5, type: 3}
   animator: {fileID: 540046428}
   muzzleFlash: {fileID: 8793784427861500725}
   damage: 1

@@ -3,6 +3,7 @@ using StarterAssets;
 
 public class Weapon : MonoBehaviour
 {
+    [SerializeField] GameObject hitVFX;
     [SerializeField] Animator animator;
     [SerializeField] ParticleSystem muzzleFlash;
     [SerializeField] int damage = 1;
@@ -32,6 +33,7 @@ public class Weapon : MonoBehaviour
         RaycastHit hit;
         if (Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out hit, Mathf.Infinity))
         {
+            Instantiate(hitVFX, hit.point, Quaternion.identity);
             EnemyHealth enemyHealth = hit.collider.GetComponent<EnemyHealth>();
             enemyHealth?.TakeDamage(damage);
         }
