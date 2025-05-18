@@ -165,6 +165,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9b1ad06783a47e409b5ae7efe45eaf8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  muzzleFlash: {fileID: 8793784427861500725}
   damage: 1
 --- !u!1001 &339534012
 PrefabInstance:
@@ -1503,6 +1504,11 @@ Transform:
   - {fileID: 1695615242}
   m_Father: {fileID: 262871545}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!198 &8793784427861500725 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 1998570516608707418, guid: 4577cbd4a0f9b7a46b564ed84138b683, type: 3}
+  m_PrefabInstance: {fileID: 9131852262807824591}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &8793784427879819891 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6056462101061189103, guid: 4577cbd4a0f9b7a46b564ed84138b683, type: 3}
@@ -1575,7 +1581,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3341262847866065954, guid: 4577cbd4a0f9b7a46b564ed84138b683, type: 3}
       propertyPath: m_Name
-      value: 'FX_Fireworks_Blue_Small '
+      value: MuzzleFlash
       objectReference: {fileID: 0}
     - target: {fileID: 6056462101061189103, guid: 4577cbd4a0f9b7a46b564ed84138b683, type: 3}
       propertyPath: m_LocalPosition.x
