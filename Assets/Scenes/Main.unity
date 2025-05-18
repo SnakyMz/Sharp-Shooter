@@ -230,6 +230,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9b1ad06783a47e409b5ae7efe45eaf8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damage: 1
 --- !u!1001 &339534012
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1003,12 +1004,13 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1094849805}
+  - component: {fileID: 1094849807}
   - component: {fileID: 1094849804}
   - component: {fileID: 1094849806}
-  - component: {fileID: 1094849807}
+  - component: {fileID: 1094849808}
   m_Layer: 6
   m_Name: Robot
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1086,6 +1088,19 @@ CapsuleCollider:
   m_Height: 1
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1094849808
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1094849803}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7960a0ea54eafc948ac0abd48cd5c950, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 3
 --- !u!1001 &1206630658
 PrefabInstance:
   m_ObjectHideFlags: 0
