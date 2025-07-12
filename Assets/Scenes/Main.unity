@@ -130,7 +130,7 @@ GameObject:
   - component: {fileID: 35739666}
   - component: {fileID: 35739665}
   - component: {fileID: 35739667}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Robot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -195,6 +195,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4135013735270702863, guid: c5efc39a8aaf6e64ea40e9ad573e9b47, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5393215578589016642, guid: c5efc39a8aaf6e64ea40e9ad573e9b47, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 8616685848737228371, guid: c5efc39a8aaf6e64ea40e9ad573e9b47, type: 3}
       propertyPath: GroundLayers.m_Bits
       value: 1
@@ -202,6 +210,10 @@ PrefabInstance:
     - target: {fileID: 8616685848737228372, guid: c5efc39a8aaf6e64ea40e9ad573e9b47, type: 3}
       propertyPath: m_Name
       value: PlayerCapsule
+      objectReference: {fileID: 0}
+    - target: {fileID: 8616685848737228372, guid: c5efc39a8aaf6e64ea40e9ad573e9b47, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8997996947095583982, guid: c5efc39a8aaf6e64ea40e9ad573e9b47, type: 3}
       propertyPath: m_LocalPosition.x
@@ -619,7 +631,7 @@ GameObject:
   - component: {fileID: 686541035}
   - component: {fileID: 686541037}
   - component: {fileID: 686541036}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -796,8 +808,8 @@ Transform:
   m_GameObject: {fileID: 732586699}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0.8881473, z: -0, w: 0.459559}
-  m_LocalPosition: {x: -12.52, y: 1.4832375, z: 10.652582}
-  m_LocalScale: {x: 6.763807, y: 1.9664751, z: 14.199798}
+  m_LocalPosition: {x: -12.086916, y: 1.2940233, z: 10.439396}
+  m_LocalScale: {x: 6.763807, y: 1.5880467, z: 14.199798}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -1021,8 +1033,8 @@ Transform:
   m_GameObject: {fileID: 1318208283}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 10.058817, y: 1.4832375, z: 5.2125816}
-  m_LocalScale: {x: 3.381227, y: 1.9664751, z: 14.199798}
+  m_LocalPosition: {x: 10.491901, y: 1.2940233, z: 4.9993954}
+  m_LocalScale: {x: 3.381227, y: 1.5880467, z: 14.199798}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -1036,7 +1048,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1471623982}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Model
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1096,10 +1108,10 @@ MonoBehaviour:
   m_Center: {x: 0, y: 2, z: 0}
   m_LayerMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 55
   m_UseGeometry: 0
   m_DefaultArea: 0
-  m_GenerateLinks: 0
+  m_GenerateLinks: 1
   m_IgnoreNavMeshAgent: 1
   m_IgnoreNavMeshObstacle: 1
   m_OverrideTileSize: 0
@@ -1226,8 +1238,8 @@ Transform:
   m_GameObject: {fileID: 1857402604}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0.35187513, z: -0, w: 0.936047}
-  m_LocalPosition: {x: -11.641184, y: 1.4832375, z: -13.897418}
-  m_LocalScale: {x: 4.2069225, y: 1.9664751, z: 14.199798}
+  m_LocalPosition: {x: -11.208099, y: 1.2940233, z: -14.110604}
+  m_LocalScale: {x: 4.2069225, y: 1.5880467, z: 14.199798}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -1243,7 +1255,7 @@ GameObject:
   - component: {fileID: 2022025101}
   - component: {fileID: 2022025103}
   - component: {fileID: 2022025102}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Capsule
   m_TagString: Untagged
   m_Icon: {fileID: 0}
