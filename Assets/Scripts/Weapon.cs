@@ -3,6 +3,8 @@ using UnityEngine;
 
 public class Weapon : MonoBehaviour
 {
+    [SerializeField] int damage = 1;
+
     StarterAssetsInputs starterAssetsInputs;
 
     void Awake()
@@ -13,15 +15,20 @@ public class Weapon : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (starterAssetsInputs.shoot)
-        {
-            RaycastHit hit;
+        HandleShoot();
+    }
 
-            if (Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out hit, Mathf.Infinity))
-            {
-                Debug.Log("Hit: " + hit.collider.name);
-                starterAssetsInputs.ShootInput(false); // Reset shoot input after processing
-            }
+    void HandleShoot()
+    {
+        if (!starterAssetsInputs.shoot) return;
+
+        RaycastHit hit;
+
+        if (Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out hit, Mathf.Infinity))
+        {
+            hit.collider.GetComponent<EneemyHealth>()?.TakeDamage(damage);
+        
+            starterAssetsInputs.ShootInput(false); // Reset shoot input after processing
         }
     }
 }
