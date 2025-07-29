@@ -3504,6 +3504,7 @@ GameObject:
   m_Component:
   - component: {fileID: 485684655}
   - component: {fileID: 485684656}
+  - component: {fileID: 485684657}
   m_Layer: 3
   m_Name: ActiveWeapon
   m_TagString: Untagged
@@ -3549,6 +3550,19 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &485684657
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 485684654}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ddf92f1c06697c44bb817c775b4d7c39, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weaponSO: {fileID: 11400000, guid: 1e77b1b19927e9b40b86c6d9cabc8a76, type: 2}
 --- !u!1001 &516242466
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9431,10 +9445,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e987ec95bcc52fd48952919f194aca53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animator: {fileID: 485684656}
-  hitVFXPrefab: {fileID: 985645174811832317, guid: a03ec740d6230a641ac86963f4adddc1, type: 3}
   muzzleFlash: {fileID: 3490226722822210882}
-  damage: 1
 --- !u!1001 &2012813382
 PrefabInstance:
   m_ObjectHideFlags: 0
