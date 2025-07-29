@@ -42,7 +42,10 @@ public class ActiveWeapon : MonoBehaviour
             currentWeapon.Shoot(weaponSO);
         }
 
-        // Reset shoot input after processing
-        starterAssetsInputs.ShootInput(false); 
+        if (!weaponSO.IsAutomatic)
+        {
+            // Reset shoot input after processing
+            starterAssetsInputs.ShootInput(false); 
+        }
     }
 }
