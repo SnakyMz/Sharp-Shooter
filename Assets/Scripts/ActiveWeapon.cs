@@ -8,6 +8,8 @@ public class ActiveWeapon : MonoBehaviour
     Weapon currentWeapon;
     Animator animator;
     StarterAssetsInputs starterAssetsInputs;
+    
+    float timeSinceLastShot = 0f;
 
     string SHOOT_ANIMATION = "Shoot";
 
@@ -25,6 +27,7 @@ public class ActiveWeapon : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        timeSinceLastShot += Time.deltaTime;
         HandleShoot();
     }
 
@@ -32,8 +35,14 @@ public class ActiveWeapon : MonoBehaviour
     {
         if (!starterAssetsInputs.shoot) return;
 
-        animator.Play(SHOOT_ANIMATION, 0, 0f);
-        starterAssetsInputs.ShootInput(false); // Reset shoot input after processing
-        currentWeapon.Shoot(weaponSO);
+        if (timeSinceLastShot >= weaponSO.FireRate)
+        {
+            timeSinceLastShot = 0f; // Reset cooldown
+            animator.Play(SHOOT_ANIMATION, 0, 0f);
+            currentWeapon.Shoot(weaponSO);
+        }
+
+        // Reset shoot input after processing
+        starterAssetsInputs.ShootInput(false); 
     }
 }
