@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: MachineGun
   m_EditorClassIdentifier: 
   Damage: 1
-  FireRate: 0.25
+  FireRate: 0.15
   HitVFX: {fileID: 985645174811832317, guid: a03ec740d6230a641ac86963f4adddc1, type: 3}
+  IsAutomatic: 1
