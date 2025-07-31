@@ -48,4 +48,9 @@ public class ActiveWeapon : MonoBehaviour
             starterAssetsInputs.ShootInput(false); 
         }
     }
+
+    public void SwitchWeapon(WeaponSO newWeapon)
+    {
+        Debug.Log("New weapon picked up: " + newWeapon.name);
+    }
 }
