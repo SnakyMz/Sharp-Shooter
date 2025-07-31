@@ -49,8 +49,16 @@ public class ActiveWeapon : MonoBehaviour
         }
     }
 
-    public void SwitchWeapon(WeaponSO newWeapon)
+    public void SwitchWeapon(WeaponSO newWeaponSO)
     {
-        Debug.Log("New weapon picked up: " + newWeapon.name);
+        if (currentWeapon)
+        {
+            Destroy(currentWeapon.gameObject); // Destroy the current weapon
+        }
+
+        // Update the weaponSO reference to the new weapon
+        weaponSO = newWeaponSO;
+        // Instantiate the new weapon prefab and assign it to currentWeapon
+        currentWeapon = Instantiate(weaponSO.WeaponPrefab, transform).GetComponent<Weapon>();
     }
 }
