@@ -1,15 +1,19 @@
 using StarterAssets;
+using Unity.Cinemachine;
 using UnityEngine;
 
 public class ActiveWeapon : MonoBehaviour
 {
     [SerializeField] WeaponSO weaponSO;
+    [SerializeField] GameObject zoomVignette;
+    [SerializeField] CinemachineVirtualCamera virtualCamera;
 
     Weapon currentWeapon;
     Animator animator;
     StarterAssetsInputs starterAssetsInputs;
     
     float timeSinceLastShot = 0f;
+    float defaultFOV = 40f;
 
     string SHOOT_ANIMATION = "Shoot";
 
@@ -21,18 +25,21 @@ public class ActiveWeapon : MonoBehaviour
 
     void Start()
     {
+        defaultFOV = virtualCamera.m_Lens.FieldOfView;
         currentWeapon = GetComponentInChildren<Weapon>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        timeSinceLastShot += Time.deltaTime;
         HandleShoot();
+        HandleZoom();
     }
 
     void HandleShoot()
     {
+        timeSinceLastShot += Time.deltaTime; // Increment cooldown timer
+
         if (!starterAssetsInputs.shoot) return;
 
         if (timeSinceLastShot >= weaponSO.FireRate)
@@ -46,6 +53,22 @@ public class ActiveWeapon : MonoBehaviour
         {
             // Reset shoot input after processing
             starterAssetsInputs.ShootInput(false); 
+        }
+    }
+
+    void HandleZoom()
+    {
+        if (!weaponSO.CanZoom) return;
+
+        if (starterAssetsInputs.zoom)
+        {
+            zoomVignette.SetActive(true);
+            virtualCamera.m_Lens.FieldOfView = weaponSO.ZoomFOV; // Set to zoom FOV
+        }
+        else
+        {
+            zoomVignette.SetActive(false);
+            virtualCamera.m_Lens.FieldOfView = defaultFOV; // Reset to default FOV
         }
     }
 
