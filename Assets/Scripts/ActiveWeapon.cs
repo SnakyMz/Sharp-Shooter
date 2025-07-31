@@ -11,21 +11,25 @@ public class ActiveWeapon : MonoBehaviour
     Weapon currentWeapon;
     Animator animator;
     StarterAssetsInputs starterAssetsInputs;
+    FirstPersonController firstPersonController;
     
     float timeSinceLastShot = 0f;
-    float defaultFOV = 40f;
+    float defaultFOV;
+    float defaultRotationSpeed;
 
     string SHOOT_ANIMATION = "Shoot";
 
     void Awake()
     {
+        firstPersonController = GetComponentInParent<FirstPersonController>();
         starterAssetsInputs = GetComponentInParent<StarterAssetsInputs>();
         animator = GetComponent<Animator>();
+        defaultFOV = virtualCamera.m_Lens.FieldOfView;
+        defaultRotationSpeed = firstPersonController.RotationSpeed;
     }
 
     void Start()
     {
-        defaultFOV = virtualCamera.m_Lens.FieldOfView;
         currentWeapon = GetComponentInChildren<Weapon>();
     }
 
@@ -64,11 +68,13 @@ public class ActiveWeapon : MonoBehaviour
         {
             zoomVignette.SetActive(true);
             virtualCamera.m_Lens.FieldOfView = weaponSO.ZoomFOV; // Set to zoom FOV
+            firstPersonController.ChangeRotationSpeed(weaponSO.ZoomRotationSpeed);
         }
         else
         {
             zoomVignette.SetActive(false);
             virtualCamera.m_Lens.FieldOfView = defaultFOV; // Reset to default FOV
+            firstPersonController.ChangeRotationSpeed(defaultRotationSpeed);
         }
     }
 
