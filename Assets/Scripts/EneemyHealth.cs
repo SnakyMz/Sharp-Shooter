@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class EneemyHealth : MonoBehaviour
 {
+    [SerializeField] ParticleSystem explosionVFX;
     [SerializeField] int health = 3;
 
     int currentHealth;
@@ -18,6 +19,7 @@ public class EneemyHealth : MonoBehaviour
         if (currentHealth <= 0)
         {
             Destroy(gameObject);
+            Instantiate(explosionVFX, transform.position, Quaternion.identity);
         }
     }
 }
