@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 545965182930456689}
-  m_Layer: 3
+  m_Layer: 7
   m_Name: Model
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -42,7 +42,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4575378898555800690}
   - component: {fileID: 1672962069277881846}
-  m_Layer: 3
+  m_Layer: 7
   m_Name: SniperRifle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -96,7 +96,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3361399004779903185, guid: 15b39fc10dd04334aa6159387c68e657, type: 3}
       propertyPath: m_Layer
-      value: 3
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 6098171267329284959, guid: 15b39fc10dd04334aa6159387c68e657, type: 3}
       propertyPath: m_LocalPosition.x
@@ -204,6 +204,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 860f35edef6dcfe40b58b14593dfeafb, type: 3}
       propertyPath: m_Name
       value: Sniper_01_Blue
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 860f35edef6dcfe40b58b14593dfeafb, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
