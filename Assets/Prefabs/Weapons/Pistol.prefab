@@ -78,6 +78,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e987ec95bcc52fd48952919f194aca53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  interactionLayer:
+    serializedVersion: 2
+    m_Bits: 4294967295
   muzzleFlash: {fileID: 445510804544706292}
 --- !u!1001 &5766221431704897008
 PrefabInstance:
