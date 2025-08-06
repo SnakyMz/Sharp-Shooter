@@ -1,4 +1,5 @@
 using StarterAssets;
+using Unity.Cinemachine;
 using UnityEngine;
 
 public class Weapon : MonoBehaviour
@@ -6,8 +7,16 @@ public class Weapon : MonoBehaviour
     [SerializeField] LayerMask interactionLayer;
     [SerializeField] ParticleSystem muzzleFlash;
 
+    CinemachineImpulseSource impulseSource;
+
+    void Awake()
+    {
+        impulseSource = GetComponent<CinemachineImpulseSource>();
+    }
+
     public void Shoot(WeaponSO weaponSO)
     {
+        impulseSource.GenerateImpulse();
         muzzleFlash.Play();
         RaycastHit hit;
 
