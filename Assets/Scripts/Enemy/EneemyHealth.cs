@@ -18,8 +18,13 @@ public class EneemyHealth : MonoBehaviour
 
         if (currentHealth <= 0)
         {
-            Destroy(gameObject);
-            Instantiate(explosionVFX, transform.position, Quaternion.identity);
+            SelfDestruct();
         }
+    }
+
+    public void SelfDestruct()
+    {
+        Destroy(gameObject);
+        Instantiate(explosionVFX, transform.position, Quaternion.identity);
     }
 }
