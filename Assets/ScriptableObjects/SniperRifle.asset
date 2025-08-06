@@ -14,7 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   WeaponPrefab: {fileID: 8548125232876883278, guid: 74babe5307a157d4198256125d4552a8, type: 3}
   Damage: 5
-  FireRate: 1
+  FireRate: 0.6
   HitVFX: {fileID: 985645174811832317, guid: a03ec740d6230a641ac86963f4adddc1, type: 3}
   IsAutomatic: 0
   CanZoom: 1
+  ZoomFOV: 10
+  ZoomRotationSpeed: 0.3
+  MagazineSize: 8
