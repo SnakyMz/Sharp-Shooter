@@ -18,13 +18,13 @@ public class Robot : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        if (!player) return;
         player = FindFirstObjectByType<FirstPersonController>();
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (!player) return;
         agent.SetDestination(player.transform.position);
     }
 
