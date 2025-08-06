@@ -7,6 +7,7 @@ public class PlayerHealth : MonoBehaviour
     [SerializeField] Image[] shieldBars;
     [SerializeField] CinemachineCamera deathCamera;
     [SerializeField] Transform weaponCamera;
+    [Range(1,10)]
     [SerializeField] int health = 10;
 
     int currentHealth;
@@ -15,6 +16,7 @@ public class PlayerHealth : MonoBehaviour
     void Awake()
     {
         currentHealth = health;
+        AdjustShield();
     }
 
     void AdjustShield()
