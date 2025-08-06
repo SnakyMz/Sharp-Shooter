@@ -114,6 +114,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ebf40e9334b6024894ffd59d1a19cb8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  robotPrefab: {fileID: 7021094554199148995, guid: cf4ed1e222f9e9842864d71022d10b53, type: 3}
+  spawnPoint: {fileID: 5084824712842148611}
+  spawnInterval: 5
 --- !u!1 &9095411373342191750
 GameObject:
   m_ObjectHideFlags: 0

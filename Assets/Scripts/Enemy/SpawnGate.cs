@@ -1,16 +1,26 @@
+using System.Collections;
 using UnityEngine;
 
 public class SpawnGate : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    [SerializeField] GameObject robotPrefab;
+    [SerializeField] Transform spawnPoint;
+    [SerializeField] float spawnInterval = 5f;
+
+    PlayerHealth player;
+
     void Start()
     {
-        
+        player = FindFirstObjectByType<PlayerHealth>();
+        StartCoroutine(SpawnRoutine());
     }
 
-    // Update is called once per frame
-    void Update()
+    IEnumerator SpawnRoutine()
     {
-        
+        while (player)
+        {
+            Instantiate(robotPrefab, spawnPoint.position, transform.rotation);
+            yield return new WaitForSeconds(spawnInterval);
+        }
     }
 }
