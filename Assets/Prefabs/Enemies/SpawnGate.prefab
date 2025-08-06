@@ -44,7 +44,7 @@ GameObject:
   - component: {fileID: 4379022549845003576}
   - component: {fileID: 3368126676136749975}
   m_Layer: 0
-  m_Name: SpawningDoor
+  m_Name: SpawnGate
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
