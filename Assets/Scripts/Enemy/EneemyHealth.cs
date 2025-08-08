@@ -12,6 +12,11 @@ public class EneemyHealth : MonoBehaviour
         currentHealth = health;
     }
 
+    private void Start()
+    {
+        GameManager.Instance.UpdateEnemiesLeft(1);
+    }
+
     public void TakeDamage(int damage)
     {
         currentHealth -= damage;
@@ -24,6 +29,7 @@ public class EneemyHealth : MonoBehaviour
 
     public void SelfDestruct()
     {
+        GameManager.Instance.UpdateEnemiesLeft(-1);
         Destroy(gameObject);
         Instantiate(explosionVFX, transform.position, Quaternion.identity);
     }
