@@ -1,9 +1,11 @@
+using StarterAssets;
 using Unity.Cinemachine;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class PlayerHealth : MonoBehaviour
 {
+    [SerializeField] GameObject gameoverPanel;
     [SerializeField] Image[] shieldBars;
     [SerializeField] CinemachineCamera deathCamera;
     [SerializeField] Transform weaponCamera;
@@ -41,9 +43,17 @@ public class PlayerHealth : MonoBehaviour
 
         if (currentHealth <= 0)
         {
-            weaponCamera.parent = null;
-            deathCamera.Priority = deathCameraPriiority;
-            Destroy(gameObject);
+            GameOver();
         }
+    }
+
+    private void GameOver()
+    {
+        weaponCamera.parent = null;
+        deathCamera.Priority = deathCameraPriiority;
+        StarterAssetsInputs inputs = FindFirstObjectByType<StarterAssetsInputs>();
+        inputs.SetCursorState(false);
+        Destroy(gameObject);
+        gameoverPanel.SetActive(true);
     }
 }
