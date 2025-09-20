@@ -8,8 +8,6 @@ public class Projectile : MonoBehaviour
 
     Rigidbody rb;
 
-    const string PLAYER_TAG = "Player";
-
     void Awake()
     {
         rb = GetComponent<Rigidbody>();
